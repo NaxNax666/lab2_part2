@@ -35,6 +35,7 @@ class ExersizeActivity: ComponentActivity() {
         val inputtext = findViewById<EditText>(R.id.editTextRes)
         val confirmbutton = findViewById<Button>(R.id.buttonConfirm)
         val retButton = findViewById<Button>(R.id.buttonReturn)
+        val edittextcorrect = findViewById<TextView>(R.id.textViewCorrect)
         var successCount = 0
         var tries_count = 1
         val (output, check) = generate_Ex(set_a, flag)
@@ -45,18 +46,25 @@ class ExersizeActivity: ComponentActivity() {
             val getres = inputtext.text.toString().toInt()
             if(getres == check){
                 successCount+=1
+                edittextcorrect.setText("Правильно")
+            }
+            else{
+                edittextcorrect.setText("Неравильно")
             }
             tries_count+=1
             if (tries_count >20){
-                val percentage = successCount.toDouble()/20.0 * 100.0
+                val percentage = successCount.toDouble()* 100.0 /20.0
                 primerview.setText("Точность ответов ${percentage}")
                 retButton.visibility = View.VISIBLE
                 confirmbutton.visibility = View.INVISIBLE
             }
             else {
-                val (output, check) = generate_Ex(set_a, false)
+                val (output, check) = generate_Ex(set_a, flag)
                 primerview.setText("Вопрос ${tries_count}\n" + output)
+
+
             }
+            inputtext.text.clear()
 
         }
         retButton.setOnClickListener {

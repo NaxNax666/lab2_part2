@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         }
         buttonFul.setOnClickListener{
             val flag = true
-            val num = 0
+            val num = -1
             val intent = Intent(this, ExersizeActivity::class.java)
             intent.putExtra("number", num)
             intent.putExtra("flag", flag)

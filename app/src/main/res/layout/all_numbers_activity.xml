@@ -8,6 +8,7 @@
         android:id="@+id/textViewEx"
         android:layout_width="match_parent"
         android:layout_height="247dp"
+        android:gravity="center"
         android:textSize="34sp" />
 
     <EditText
@@ -17,6 +18,12 @@
         android:ems="10"
         android:hint="@string/editTextResString"
         android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/buttonConfirm"
@@ -30,4 +37,5 @@
         android:layout_height="wrap_content"
         android:text="Назад"
         android:visibility="invisible" />
+
 </LinearLayout>
