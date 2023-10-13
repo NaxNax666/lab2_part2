@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mul_table" />
+
+    <EditText
+        android:id="@+id/editTextStartNumber"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:ems="10"
+        android:hint="@string/editTextStartNumberString"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonAllNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAllNumbersString" />
+
+    <Button
+        android:id="@+id/buttonCommonEx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/editTextCommonExText" />
+</LinearLayout>

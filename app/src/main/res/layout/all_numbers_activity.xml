@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewEx"
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/editTextRes"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:ems="10"
+        android:hint="@string/editTextResString"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonConfirmString" />
+
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:visibility="invisible" />
+</LinearLayout>

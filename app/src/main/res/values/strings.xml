@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">lab2_part2</string>
+    <string name="buttonAllNumbersString">Упражнения для всех чисел</string>
+    <string name="editTextCommonExText">Упражнение выборочно</string>
+    <string name="editTextStartNumberString">Введите число</string>
+    <string name="editTextResString">Введите решение</string>
+    <string name="buttonConfirmString">Подтвердить</string>
+    <string name="title_ex_activity">ExActivity</string>
 </resources>
