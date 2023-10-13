@@ -1,5 +1,6 @@
 package com.example.lab2_part2
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -25,10 +26,24 @@ class MainActivity : ComponentActivity() {
         buttonSelectedEx.setOnClickListener{
             val flag = false
             val num = numberText.text.toString().toInt()
-            val intent = Intent(this, ExersizeActivity::class.java)
-            intent.putExtra("number", num)
-            intent.putExtra("flag", flag)
-            startActivity(intent)
+            if (num>9 || num<2){
+                val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+                builder
+                    .setMessage("Число должно быть в диапазоне [2:9]")
+                    .setTitle("Ошибка")
+                    .setPositiveButton("ОК") { dialog, which ->
+                        // Do something.
+                    }
+
+                val dialog: AlertDialog = builder.create()
+                dialog.show()
+            }
+            else {
+                val intent = Intent(this, ExersizeActivity::class.java)
+                intent.putExtra("number", num)
+                intent.putExtra("flag", flag)
+                startActivity(intent)
+            }
         }
         buttonFul.setOnClickListener{
             val flag = true

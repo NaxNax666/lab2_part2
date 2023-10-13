@@ -14,7 +14,7 @@ fun generate_Ex(a: Int, flag: Boolean): Pair<String, Int>{
     var result = 0
     if (flag){
         output = "${generateA} * ${generateB} = "
-        result = generateA*generateB
+        result = generateA * generateB
     }
     else{
         output = "${a} * ${generateB} = "
@@ -38,18 +38,19 @@ class ExersizeActivity: ComponentActivity() {
         val edittextcorrect = findViewById<TextView>(R.id.textViewCorrect)
         var successCount = 0
         var tries_count = 1
-        val (output, check) = generate_Ex(set_a, flag)
-        primerview.setText("Вопрос ${tries_count}\n"+output)
+        val (st, stc) = generate_Ex(set_a, flag)
+        primerview.setText("Вопрос ${tries_count}\n"+st)
 
-
+        var check = stc
         confirmbutton.setOnClickListener{
             val getres = inputtext.text.toString().toInt()
+
             if(getres == check){
                 successCount+=1
                 edittextcorrect.setText("Правильно")
             }
             else{
-                edittextcorrect.setText("Неравильно")
+                edittextcorrect.setText("Неправильно")
             }
             tries_count+=1
             if (tries_count >20){
@@ -59,8 +60,9 @@ class ExersizeActivity: ComponentActivity() {
                 confirmbutton.visibility = View.INVISIBLE
             }
             else {
-                val (output, check) = generate_Ex(set_a, flag)
+                val (output, kk) = generate_Ex(set_a, flag)
                 primerview.setText("Вопрос ${tries_count}\n" + output)
+                check = kk
 
 
             }
